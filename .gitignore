@@ -1,0 +1,123 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+
+# Production build
+dist/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# PocketBase
+pb_data/
+pocketbase
+pocketbase.exe
+pb_public/app/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Package manager
+.pnpm-store
+.yarn/
+.yarn-error.log
+
+# Optional: Keep these if you want to track them
+# pb_migrations/
+# pb_hooks/
+
+# Uploads and user content (IMPORTANT: Never commit user data)
+uploads/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+!public/**/*.svg
+!src/**/*.svg
+
+# Stripe test data
+stripe-mock/
+
+# Local development
+.local
+
+# Misc
+.cache
+.parcel-cache
+.next
+.nuxt
+.vuepress/dist
+.serverless
+.fusebox
+.dynamodb
+.tern-port
+.vercel
+
+# SQLite databases (if not using PocketBase)
+*.sqlite
+*.sqlite3
+*.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# IDE - VSCode
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# System Files
+.DS_Store
+Thumbs.db

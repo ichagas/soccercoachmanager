@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexCarousel - AI LinkedIn Carousel Generator</title>
+    <meta name="description" content="Transform any content into high-converting LinkedIn carousels in under 20 seconds with AI.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero-pattern {
+            background-color: #f9fafb;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+
+    <script>
+        // Language detection and redirect
+        (function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const savedLang = localStorage.getItem('language');
+
+            // If user has Brazilian Portuguese preference and not already on Portuguese page
+            if ((savedLang === 'pt-BR' || userLang.startsWith('pt')) && !window.location.pathname.includes('index-pt.html')) {
+                // Only redirect if pt-BR page exists (in production)
+                if (window.location.hostname !== 'localhost') {
+                    window.location.href = '/index-pt.html';
+                }
+            }
+        })();
+
+        // Language switcher
+        function switchLanguage(lang) {
+            localStorage.setItem('language', lang);
+            if (lang === 'pt-BR') {
+                window.location.href = '/index-pt.html';
+            } else {
+                window.location.href = '/';
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">ApexCarousel</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                            <span>🇺🇸 EN</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                            <a href="/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">🇺🇸 English</a>
+                            <a href="/index-pt.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">🇧🇷 Português</a>
+                        </div>
+                    </div>
+                    <a href="/app" class="text-gray-600 hover:text-gray-900">Login</a>
+                    <a href="/app" class="px-4 py-2 rounded-lg gradient-bg text-white font-semibold hover:opacity-90 transition-opacity">Get Started Free</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+                    Turn Any Idea Into a<br>
+                    <span class="gradient-text">$10k+ LinkedIn Carousel</span><br>
+                    In 17 Seconds
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    AI-powered carousel generator for consultants, agency owners, and solopreneurs.
+                    No design skills needed. Just paste your content and get a professional carousel + caption + pinned comment.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/app" class="px-8 py-4 rounded-lg gradient-bg text-white text-lg font-semibold hover:opacity-90 transition-opacity">
+                        Start Building - Free
+                    </a>
+                    <a href="#examples" class="px-8 py-4 rounded-lg bg-white text-gray-900 text-lg font-semibold border-2 border-gray-300 hover:border-gray-400 transition-colors">
+                        See Examples
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                    ✓ 5 free carousels • No credit card required
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="bg-white py-12 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-2xl font-bold text-gray-900 mb-2">
+                    "$38k in client leads last month using carousels from this tool"
+                </p>
+                <p class="text-gray-600">Trusted by 500+ consultants and agency owners</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50" id="features">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Everything You Need to Win on LinkedIn</h3>
+                <p class="text-xl text-gray-600">No design skills. No hours of writing. Just results.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">AI-Powered Generation</h4>
+                    <p class="text-gray-600">Paste any URL, YouTube video, or raw text. Our AI transforms it into a high-converting carousel in seconds.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Your Brand, Automatically</h4>
+                    <p class="text-gray-600">Upload your headshot, logo, and colors once. Every carousel gets your brand applied automatically.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Multiple Writing Styles</h4>
+                    <p class="text-gray-600">Choose from Alex Hormozi, Justin Welsh, Dan Koe styles, or train the AI on your own voice.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">PDF + Caption + Comment</h4>
+                    <p class="text-gray-600">Get a ready-to-post PDF, full caption with line breaks, and a high-engagement pinned comment.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Save & Remix</h4>
+                    <p class="text-gray-600">All carousels saved to your history. Remix any public LinkedIn post by pasting the URL.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Proven to Convert</h4>
+                    <p class="text-gray-600">Non-cringy, authority-building content designed to attract high-ticket clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="py-20 bg-white" id="examples">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Real Carousels, Real Results</h3>
+                <p class="text-xl text-gray-600">See what you can create in under 20 seconds</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Example placeholders - replace with actual images -->
+                <div class="bg-gray-100 rounded-xl aspect-square flex items-center justify-center">
+                    <p class="text-gray-500">Carousel Example 1</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl aspect-square flex items-center justify-center">
+                    <p class="text-gray-500">Carousel Example 2</p>
+                </div>
+                <div class="bg-gray-100 rounded-xl aspect-square flex items-center justify-center">
+                    <p class="text-gray-500">Carousel Example 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Loved by Consultants & Founders</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah Johnson</p>
+                            <p class="text-sm text-gray-600">Marketing Consultant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"This tool saved me 10+ hours per week. I went from posting once a month to 3x per week. My leads doubled."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Mike Chen</p>
+                            <p class="text-sm text-gray-600">Agency Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The AI writes better than my copywriter. I'm not even joking. Best $29/mo I've ever spent."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Emma Rodriguez</p>
+                            <p class="text-sm text-gray-600">SaaS Founder</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"I hit 50k followers in 6 months using ApexCarousel. The remix feature is pure gold."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-white" id="pricing">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h3>
+                <p class="text-xl text-gray-600">Start free. Upgrade when you're ready.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">Free</h4>
+                    <p class="text-4xl font-bold text-gray-900 mb-6">$0</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">5 carousels lifetime</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Basic styles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">PDF download</span>
+                        </li>
+                    </ul>
+                    <a href="/app" class="block w-full text-center px-6 py-3 rounded-lg border-2 border-gray-300 text-gray-900 font-semibold hover:border-gray-400 transition-colors">
+                        Start Free
+                    </a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-white border-2 border-purple-600 rounded-2xl p-8 relative transform scale-105">
+                    <div class="absolute top-0 right-0 bg-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-bl-lg rounded-tr-xl">
+                        POPULAR
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">Pro</h4>
+                    <p class="text-4xl font-bold text-gray-900 mb-6">$29<span class="text-lg text-gray-600">/mo</span></p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700"><strong>Unlimited</strong> carousels</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">All styles + custom voice</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Brand kit</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">History & remix</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="/app" class="block w-full text-center px-6 py-3 rounded-lg gradient-bg text-white font-semibold hover:opacity-90 transition-opacity">
+                        Get Pro
+                    </a>
+                </div>
+
+                <!-- Founder Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">Founder Lifetime</h4>
+                    <p class="text-4xl font-bold text-gray-900 mb-6">$99<span class="text-lg text-gray-600"> once</span></p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Everything in Pro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700"><strong>Lifetime</strong> access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Early access to features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Founder badge</span>
+                        </li>
+                    </ul>
+                    <a href="/app" class="block w-full text-center px-6 py-3 rounded-lg border-2 border-gray-300 text-gray-900 font-semibold hover:border-gray-400 transition-colors">
+                        Get Lifetime Access
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Build Your LinkedIn Authority?
+            </h3>
+            <p class="text-xl text-white opacity-90 mb-8">
+                Join 500+ consultants and founders creating carousels that convert
+            </p>
+            <a href="/app" class="inline-block px-8 py-4 rounded-lg bg-white text-purple-600 text-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Building - Free
+            </a>
+            <p class="mt-4 text-white opacity-75">
+                ✓ 5 free carousels • No credit card required
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white font-bold mb-4">ApexCarousel</h4>
+                    <p class="text-sm">AI-powered LinkedIn carousel generator for B2B professionals.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#examples" class="hover:text-white">Examples</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:support@apexcarousel.com" class="hover:text-white">support@apexcarousel.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 ApexCarousel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
