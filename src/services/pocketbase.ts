@@ -1,5 +1,12 @@
 import PocketBase from 'pocketbase'
-import type { User, Generation } from '../types'
+import type {
+  User,
+  Team,
+  Player,
+  Game,
+  PracticePlan,
+  PocketBaseList,
+} from '../types'
 
 const PB_URL = import.meta.env.VITE_POCKETBASE_URL || 'http://localhost:8090'
 
@@ -28,18 +35,21 @@ class PocketBaseService {
     return this.pb.authStore.isValid
   }
 
+  // ============================================================================
   // Auth methods
+  // ============================================================================
+
   async login(email: string, password: string) {
     return await this.pb.collection('users').authWithPassword(email, password)
   }
 
-  async signup(email: string, password: string, passwordConfirm: string) {
+  async signup(email: string, password: string, passwordConfirm: string, name?: string) {
     const data = {
       email,
       password,
       passwordConfirm,
-      is_pro: false,
-      preferred_language: 'en',
+      name: name || '',
+      preferred_language: 'en' as const,
     }
     return await this.pb.collection('users').create(data)
   }
@@ -56,9 +66,16 @@ class PocketBaseService {
     this.pb.authStore.clear()
   }
 
+  // ============================================================================
   // User methods
+  // ============================================================================
+
   async updateUser(id: string, data: Partial<User>) {
-    return await this.pb.collection('users').update(id, data)
+    return await this.pb.collection('users').update<User>(id, data)
+  }
+
+  async getUser(id: string) {
+    return await this.pb.collection('users').getOne<User>(id)
   }
 
   async uploadFile(collection: string, recordId: string, field: string, file: File) {
@@ -71,61 +88,150 @@ class PocketBaseService {
     return this.pb.files.getUrl(record, filename, { thumb })
   }
 
-  // Generation methods
-  async createGeneration(data: Partial<Generation>) {
-    return await this.pb.collection('generations').create({
+  // ============================================================================
+  // Team methods
+  // ============================================================================
+
+  async createTeam(data: Partial<Team>) {
+    return await this.pb.collection('teams').create<Team>({
       ...data,
-      owner: this.currentUser?.id,
+      user_id: this.currentUser?.id,
     })
   }
 
-  async getGenerations(page = 1, perPage = 20) {
-    return await this.pb.collection('generations').getList<Generation>(page, perPage, {
+  async getTeams(page = 1, perPage = 50) {
+    return await this.pb.collection('teams').getList<Team>(page, perPage, {
       sort: '-created',
-      filter: `owner = "${this.currentUser?.id}"`,
+      filter: `user_id = "${this.currentUser?.id}"`,
     })
   }
 
-  async getGeneration(id: string) {
-    return await this.pb.collection('generations').getOne<Generation>(id)
+  async getTeam(id: string) {
+    return await this.pb.collection('teams').getOne<Team>(id)
   }
 
-  async updateGeneration(id: string, data: Partial<Generation>) {
-    return await this.pb.collection('generations').update(id, data)
+  async updateTeam(id: string, data: Partial<Team>) {
+    return await this.pb.collection('teams').update<Team>(id, data)
   }
 
-  async deleteGeneration(id: string) {
-    return await this.pb.collection('generations').delete(id)
+  async deleteTeam(id: string) {
+    return await this.pb.collection('teams').delete(id)
   }
 
-  async countGenerations() {
-    const result = await this.pb.collection('generations').getList(1, 1, {
-      filter: `owner = "${this.currentUser?.id}"`,
+  // ============================================================================
+  // Player methods
+  // ============================================================================
+
+  async createPlayer(data: Partial<Player>) {
+    return await this.pb.collection('players').create<Player>(data)
+  }
+
+  async getPlayers(teamId: string, page = 1, perPage = 100) {
+    return await this.pb.collection('players').getList<Player>(page, perPage, {
+      sort: 'number,name',
+      filter: `team_id = "${teamId}"`,
+    })
+  }
+
+  async getPlayer(id: string) {
+    return await this.pb.collection('players').getOne<Player>(id)
+  }
+
+  async updatePlayer(id: string, data: Partial<Player>) {
+    return await this.pb.collection('players').update<Player>(id, data)
+  }
+
+  async deletePlayer(id: string) {
+    return await this.pb.collection('players').delete(id)
+  }
+
+  // ============================================================================
+  // Game methods
+  // ============================================================================
+
+  async createGame(data: Partial<Game>) {
+    return await this.pb.collection('games').create<Game>({
+      ...data,
+      status: data.status || 'draft',
+    })
+  }
+
+  async getGames(teamId: string, page = 1, perPage = 50) {
+    return await this.pb.collection('games').getList<Game>(page, perPage, {
+      sort: '-date',
+      filter: `team_id = "${teamId}"`,
+    })
+  }
+
+  async getRecentGames(teamId: string, limit = 5) {
+    return await this.pb.collection('games').getList<Game>(1, limit, {
+      sort: '-date',
+      filter: `team_id = "${teamId}" && status = "final"`,
+    })
+  }
+
+  async getGame(id: string) {
+    return await this.pb.collection('games').getOne<Game>(id)
+  }
+
+  async updateGame(id: string, data: Partial<Game>) {
+    return await this.pb.collection('games').update<Game>(id, data)
+  }
+
+  async deleteGame(id: string) {
+    return await this.pb.collection('games').delete(id)
+  }
+
+  // ============================================================================
+  // Practice Plan methods
+  // ============================================================================
+
+  async createPracticePlan(data: Partial<PracticePlan>) {
+    return await this.pb.collection('practice_plans').create<PracticePlan>(data)
+  }
+
+  async getPracticePlans(teamId: string, page = 1, perPage = 50) {
+    return await this.pb.collection('practice_plans').getList<PracticePlan>(page, perPage, {
+      sort: '-created',
+      filter: `team_id = "${teamId}"`,
+    })
+  }
+
+  async getPracticePlan(id: string) {
+    return await this.pb.collection('practice_plans').getOne<PracticePlan>(id)
+  }
+
+  async updatePracticePlan(id: string, data: Partial<PracticePlan>) {
+    return await this.pb.collection('practice_plans').update<PracticePlan>(id, data)
+  }
+
+  async deletePracticePlan(id: string) {
+    return await this.pb.collection('practice_plans').delete(id)
+  }
+
+  // ============================================================================
+  // Utility methods
+  // ============================================================================
+
+  async countTeams() {
+    const result = await this.pb.collection('teams').getList(1, 1, {
+      filter: `user_id = "${this.currentUser?.id}"`,
     })
     return result.totalItems
   }
 
-  // Subscription check
-  async checkSubscription() {
-    const user = this.currentUser
-    if (!user) {
-      return {
-        tier: 'free' as const,
-        generations_used: 0,
-        generations_limit: 5,
-        can_generate: false,
-      }
-    }
+  async countPlayers(teamId: string) {
+    const result = await this.pb.collection('players').getList(1, 1, {
+      filter: `team_id = "${teamId}"`,
+    })
+    return result.totalItems
+  }
 
-    const count = await this.countGenerations()
-    const isPro = user.is_pro
-
-    return {
-      tier: isPro ? ('pro' as const) : ('free' as const),
-      generations_used: count,
-      generations_limit: isPro ? null : 5,
-      can_generate: isPro || count < 5,
-    }
+  async countGames(teamId: string) {
+    const result = await this.pb.collection('games').getList(1, 1, {
+      filter: `team_id = "${teamId}"`,
+    })
+    return result.totalItems
   }
 }
 
