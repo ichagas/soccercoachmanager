@@ -1,0 +1,512 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-11-23",
+  "focus_areas": {
+    "defense": {
+      "name": "Defensive Shape",
+      "description": "Improve defensive organization, positioning, and compactness",
+      "drills": [
+        {
+          "id": "def_1",
+          "name": "1v1 Close Out",
+          "type": "drill",
+          "duration": 10,
+          "players": "Pairs",
+          "setup": "15x15 yard grid. Attacker with ball, defender 10 yards away.",
+          "cues": [
+            "Close down quickly - sprint first 2/3, controlled last 1/3",
+            "Stay on toes, knees bent",
+            "Force to weak side or touchline",
+            "Don't dive in - delay and contain"
+          ]
+        },
+        {
+          "id": "def_2",
+          "name": "Defensive Triangle",
+          "type": "drill",
+          "duration": 15,
+          "players": "Groups of 5 (3v2)",
+          "setup": "20x20 yard grid. 3 attackers vs 2 defenders.",
+          "cues": [
+            "Cover shadow - block passing lanes",
+            "Communication - 'ball', 'cover'",
+            "Compact shape - stay connected",
+            "Pressure, cover, balance"
+          ]
+        },
+        {
+          "id": "def_3",
+          "name": "Defensive Block Sliding",
+          "type": "drill",
+          "duration": 12,
+          "players": "8-10 (back 4 + mids)",
+          "setup": "Half field. Defensive line practicing shifting.",
+          "cues": [
+            "Slide together as a unit",
+            "Maintain distances (5-7 yards)",
+            "Squeeze space behind",
+            "Step up together when ball goes back"
+          ]
+        },
+        {
+          "id": "def_4",
+          "name": "Recovery Runs",
+          "type": "drill",
+          "duration": 8,
+          "players": "Whole team",
+          "setup": "Full field. Transition from attack to defense.",
+          "cues": [
+            "Sprint back to goal side",
+            "Fastest route - straight lines",
+            "Communicate who's tracking whom",
+            "Recover to shape quickly"
+          ]
+        },
+        {
+          "id": "def_5",
+          "name": "Clearance Under Pressure",
+          "type": "drill",
+          "duration": 10,
+          "players": "Groups of 4-6",
+          "setup": "Penalty area. Defenders clearing crosses.",
+          "cues": [
+            "Attack the ball at highest point",
+            "Head through the ball",
+            "Clear for distance and width",
+            "Communicate - 'keeper's' or 'away'"
+          ]
+        }
+      ],
+      "small_sided_games": [
+        {
+          "id": "def_ssg_1",
+          "name": "4v4 No Turn in Defensive Half",
+          "type": "ssg",
+          "duration": 15,
+          "players": "8 + keepers",
+          "setup": "40x30 yard field split in half. Goal at each end.",
+          "rules": [
+            "Attackers cannot turn in defensive half",
+            "Must pass forward immediately if receiving in own half",
+            "Regular soccer otherwise"
+          ],
+          "cues": [
+            "Immediate pressure when ball in their half",
+            "Compact when defending",
+            "Win ball and counter quickly"
+          ]
+        },
+        {
+          "id": "def_ssg_2",
+          "name": "6v6+1 Defending in Numbers",
+          "type": "ssg",
+          "duration": 18,
+          "players": "13 + keepers",
+          "setup": "50x40 yard field. +1 neutral player always with attacking team.",
+          "rules": [
+            "Defending team always outnumbered",
+            "Goal = 1 point, win ball and score within 10 seconds = 3 points"
+          ],
+          "cues": [
+            "Force play wide or back",
+            "Don't get pulled out of shape",
+            "Counter press when you win it"
+          ]
+        }
+      ]
+    },
+    "attack": {
+      "name": "Attacking Movement",
+      "description": "Improve attacking creativity, movement off the ball, and chance creation",
+      "drills": [
+        {
+          "id": "att_1",
+          "name": "Passing Patterns with Movement",
+          "type": "drill",
+          "duration": 12,
+          "players": "Groups of 5-6",
+          "setup": "20x20 yard grid. Cones marking starting positions.",
+          "cues": [
+            "Pass and move into space",
+            "Check away then come short",
+            "Quality of pass - right foot, right pace",
+            "Head up before receiving"
+          ]
+        },
+        {
+          "id": "att_2",
+          "name": "Third Man Runs",
+          "type": "drill",
+          "duration": 15,
+          "players": "Groups of 4-5",
+          "setup": "25x15 yard channel. Progress ball to end.",
+          "cues": [
+            "Third player makes run after first pass",
+            "Time the run with the pass",
+            "Accelerate into space",
+            "Give early eye contact for return pass"
+          ]
+        },
+        {
+          "id": "att_3",
+          "name": "Overlapping Runs",
+          "type": "drill",
+          "duration": 10,
+          "players": "Groups of 3-4",
+          "setup": "Wing area. Winger + fullback combinations.",
+          "cues": [
+            "Communication - 'hold' or 'turn'",
+            "Overlap at speed",
+            "Give and go or dummy over",
+            "Deliver quality crosses"
+          ]
+        },
+        {
+          "id": "att_4",
+          "name": "Breaking Lines",
+          "type": "drill",
+          "duration": 12,
+          "players": "8-10",
+          "setup": "Three zones. Must break through each line.",
+          "cues": [
+            "Scan before receiving",
+            "Play forward when possible",
+            "Move into receiving space",
+            "Combination play to penetrate"
+          ]
+        },
+        {
+          "id": "att_5",
+          "name": "1-2 Combinations in Final Third",
+          "type": "drill",
+          "duration": 10,
+          "players": "Groups of 3 + keeper",
+          "setup": "Edge of box. Create shooting opportunities.",
+          "cues": [
+            "Quick one-touch returns",
+            "Move defender before passing",
+            "Shoot first time when possible",
+            "Follow shots for rebounds"
+          ]
+        }
+      ],
+      "small_sided_games": [
+        {
+          "id": "att_ssg_1",
+          "name": "5v5 End Zones",
+          "type": "ssg",
+          "duration": 16,
+          "players": "10",
+          "setup": "50x30 field. 5-yard end zones at each end.",
+          "rules": [
+            "Score by controlling ball in opponent's end zone",
+            "Must make 3+ passes before scoring",
+            "Encourage movement and support"
+          ],
+          "cues": [
+            "Create space with movement",
+            "Support from multiple angles",
+            "Switch play to find gaps"
+          ]
+        },
+        {
+          "id": "att_ssg_2",
+          "name": "7v7 with Wide Goals",
+          "type": "ssg",
+          "duration": 18,
+          "players": "14 + keepers",
+          "setup": "60x45 field. Two small goals on each endline (wide apart).",
+          "rules": [
+            "Can score in either goal",
+            "Forces width and switching play"
+          ],
+          "cues": [
+            "Spread the field",
+            "Switch point of attack",
+            "Attack with numbers"
+          ]
+        }
+      ]
+    },
+    "control": {
+      "name": "Ball Control & First Touch",
+      "description": "Improve technical skills, first touch, and possession under pressure",
+      "drills": [
+        {
+          "id": "ctrl_1",
+          "name": "First Touch in Tight Spaces",
+          "type": "drill",
+          "duration": 10,
+          "players": "Pairs",
+          "setup": "10x10 yard grid. Passing under pressure.",
+          "cues": [
+            "Receive across body",
+            "First touch away from pressure",
+            "Open body shape",
+            "Soft touch with inside of foot"
+          ]
+        },
+        {
+          "id": "ctrl_2",
+          "name": "Rondo 4v2",
+          "type": "drill",
+          "duration": 12,
+          "players": "Groups of 6",
+          "setup": "12x12 yard grid. Keep away.",
+          "cues": [
+            "Two touch maximum",
+            "Constant movement",
+            "Create passing angles",
+            "Communicate before receiving"
+          ]
+        },
+        {
+          "id": "ctrl_3",
+          "name": "Turning on the Half Turn",
+          "type": "drill",
+          "duration": 10,
+          "players": "Groups of 3-4",
+          "setup": "15x15 yard grid. Receive and turn.",
+          "cues": [
+            "Check shoulder before ball arrives",
+            "Open hips to see field",
+            "Turn into space, not pressure",
+            "Accelerate away after turn"
+          ]
+        },
+        {
+          "id": "ctrl_4",
+          "name": "Receiving with Pressure Behind",
+          "type": "drill",
+          "duration": 12,
+          "players": "Groups of 3",
+          "setup": "Receiver with defender behind. Passer 15 yards away.",
+          "cues": [
+            "Feel where defender is",
+            "Lay off if under pressure",
+            "Turn if space is there",
+            "Protect the ball with body"
+          ]
+        },
+        {
+          "id": "ctrl_5",
+          "name": "Aerial Control Drill",
+          "type": "drill",
+          "duration": 10,
+          "players": "Pairs",
+          "setup": "Partners 15 yards apart. Lofted passes.",
+          "cues": [
+            "Get underneath the ball",
+            "Cushion with inside/thigh/chest",
+            "Kill the ball dead",
+            "Second touch into space"
+          ]
+        }
+      ],
+      "small_sided_games": [
+        {
+          "id": "ctrl_ssg_1",
+          "name": "6v6 Two-Touch Max",
+          "type": "ssg",
+          "duration": 15,
+          "players": "12 + keepers",
+          "setup": "45x35 yard field.",
+          "rules": [
+            "Maximum two touches",
+            "Loss of possession if more than two touches"
+          ],
+          "cues": [
+            "First touch sets up second",
+            "Think one step ahead",
+            "Quick decision making"
+          ]
+        },
+        {
+          "id": "ctrl_ssg_2",
+          "name": "Possession Game 5v5+2",
+          "type": "ssg",
+          "duration": 16,
+          "players": "12",
+          "setup": "30x30 yard grid. +2 neutral players.",
+          "rules": [
+            "Keep possession as long as possible",
+            "10 consecutive passes = 1 point"
+          ],
+          "cues": [
+            "Constant movement",
+            "Create space for teammates",
+            "Quality first touch"
+          ]
+        }
+      ]
+    },
+    "pressing": {
+      "name": "High Pressing",
+      "description": "Improve team pressing, counter-pressing, and winning the ball high",
+      "drills": [
+        {
+          "id": "press_1",
+          "name": "Pressing Triggers",
+          "type": "drill",
+          "duration": 10,
+          "players": "8-10 (two teams)",
+          "setup": "30x20 yard grid. Possession with pressing cues.",
+          "cues": [
+            "Press when: bad touch, back pass, slow play",
+            "Sprint to pressure ball",
+            "Cut passing lanes",
+            "Work as a unit - don't go alone"
+          ]
+        },
+        {
+          "id": "press_2",
+          "name": "Counter Press After Loss",
+          "type": "drill",
+          "duration": 12,
+          "players": "10-12 (two teams)",
+          "setup": "40x30 yard field. Transition game.",
+          "cues": [
+            "Win ball back within 5 seconds",
+            "Nearest player presses immediately",
+            "Others cut off outlets",
+            "Aggressive mindset"
+          ]
+        },
+        {
+          "id": "press_3",
+          "name": "High Press from Goal Kick",
+          "type": "drill",
+          "duration": 10,
+          "players": "11 vs 11",
+          "setup": "Full or 3/4 field. Practice pressing keeper.",
+          "cues": [
+            "Force to weak side",
+            "Show inside or outside",
+            "Second presser covers next pass",
+            "Stay compact - no gaps"
+          ]
+        },
+        {
+          "id": "press_4",
+          "name": "Pressing Lanes",
+          "type": "drill",
+          "duration": 12,
+          "players": "Groups of 6-8",
+          "setup": "30x25 yard grid split into channels.",
+          "cues": [
+            "Force play into specific area",
+            "Curved run to show direction",
+            "Support presser immediately",
+            "Be aggressive but controlled"
+          ]
+        },
+        {
+          "id": "press_5",
+          "name": "Defensive Unit Pressing",
+          "type": "drill",
+          "duration": 15,
+          "players": "Back 4 + 2 mids vs 6 attackers",
+          "setup": "Half field. Defending team practices stepping up.",
+          "cues": [
+            "Step up as a line",
+            "Squeeze space behind",
+            "Win the ball or force back",
+            "Cover behind aggressive pressers"
+          ]
+        }
+      ],
+      "small_sided_games": [
+        {
+          "id": "press_ssg_1",
+          "name": "5v5 Win Ball in 10 Seconds",
+          "type": "ssg",
+          "duration": 15,
+          "players": "10 + keepers",
+          "setup": "40x30 yard field.",
+          "rules": [
+            "Defending team must win ball within 10 seconds",
+            "If they do, they get 2 points for scoring",
+            "Regular goal = 1 point"
+          ],
+          "cues": [
+            "Immediate pressure",
+            "Cut off all forward passes",
+            "Hunt in packs"
+          ]
+        },
+        {
+          "id": "press_ssg_2",
+          "name": "7v7 Three Zone Pressing",
+          "type": "ssg",
+          "duration": 18,
+          "players": "14 + keepers",
+          "setup": "60x40 field divided into thirds.",
+          "rules": [
+            "Extra point for winning ball in attacking third",
+            "Must press immediately in final third"
+          ],
+          "cues": [
+            "High intensity when in final third",
+            "Force mistakes",
+            "Quick transition to attack"
+          ]
+        }
+      ]
+    }
+  },
+  "warm_up_activities": [
+    {
+      "name": "Dynamic Stretching",
+      "duration": 5,
+      "description": "Leg swings, walking lunges, high knees, butt kicks"
+    },
+    {
+      "name": "Technical Warm-up",
+      "duration": 5,
+      "description": "Passing in pairs, moving, different surfaces"
+    },
+    {
+      "name": "Activation Game",
+      "duration": 5,
+      "description": "Keep away, tag, or small 3v3"
+    }
+  ],
+  "cool_down_activities": [
+    {
+      "name": "Light Jogging",
+      "duration": 3,
+      "description": "Slow jog around field to bring heart rate down"
+    },
+    {
+      "name": "Static Stretching",
+      "duration": 7,
+      "description": "Hamstrings, quads, calves, hip flexors, groin"
+    }
+  ],
+  "coaching_tips": {
+    "defense": [
+      "Patience is key - don't dive in",
+      "Talk constantly - communication wins games",
+      "Defend as a team, not individuals",
+      "Force attackers where you want them to go"
+    ],
+    "attack": [
+      "Move before you receive",
+      "Play forward when possible",
+      "Support from multiple angles",
+      "Take risks in attacking third"
+    ],
+    "control": [
+      "Quality over speed",
+      "First touch is everything",
+      "Receive across your body",
+      "Head up - see your next option"
+    ],
+    "pressing": [
+      "Timing is critical",
+      "Press as a unit, not alone",
+      "Win it in 5 seconds or drop off",
+      "Immediate intensity when triggered"
+    ]
+  }
+}
