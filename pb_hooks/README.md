@@ -1,40 +1,26 @@
 # PocketBase Hooks
 
-This directory will contain PocketBase server-side hooks (JavaScript files that run on the PocketBase server).
+This directory contains PocketBase server-side hooks (JavaScript files that run on the PocketBase server).
 
-## Planned Hooks
+## Soccer Coach Manager Hooks
 
-### 1. fetch_url.pb.js (Sprint 6)
-Endpoint to fetch and extract text from URLs.
+Currently, the Soccer Coach Manager app does not require custom PocketBase hooks. All business logic is handled in the React frontend or through PocketBase's built-in features.
 
-**Endpoint:** `POST /api/fetch-url`
+### Future Hooks (Phase 2+)
 
-**Request:**
-```json
-{
-  "url": "https://example.com/blog-post"
-}
-```
+Potential hooks that may be added in future versions:
 
-**Response:**
-```json
-{
-  "success": true,
-  "text": "Extracted text content...",
-  "title": "Page title"
-}
-```
+1. **Analytics Calculation Hook**
+   - Automatically calculate team analytics when a game is saved
+   - Update recommended focus areas
 
-### 2. stripe_webhook.pb.js (Sprint 10)
-Handle Stripe webhooks for subscription management.
+2. **Subscription Management Hook** (when subscription tiers are implemented)
+   - Handle subscription webhooks
+   - Enforce usage limits based on tier
 
-**Endpoint:** `POST /api/stripe-webhook`
-
-**Events handled:**
-- `checkout.session.completed`
-- `customer.subscription.created`
-- `customer.subscription.updated`
-- `customer.subscription.deleted`
+3. **Email Notifications Hook**
+   - Send practice plan reminders
+   - Weekly digest emails
 
 ## Hook Development
 
@@ -55,6 +41,17 @@ routerAdd("POST", "/api/custom-endpoint", (c) => {
 })
 ```
 
+## Testing Hooks
+
+Since PocketBase hooks don't support the same test framework as React, use simple CURL scripts:
+
+```bash
+# Example: Test custom endpoint
+curl -X POST http://localhost:8090/api/custom-endpoint \
+  -H "Content-Type: application/json" \
+  -d '{"test":"data"}'
+```
+
 ## Documentation
 
 - [PocketBase Hooks Guide](https://pocketbase.io/docs/js-overview/)
@@ -64,5 +61,5 @@ routerAdd("POST", "/api/custom-endpoint", (c) => {
 
 - Hooks run in a V8 JavaScript environment
 - They have full access to the database
-- Use hooks for server-side logic only (e.g., webhooks, URL fetching)
+- Use hooks for server-side logic only
 - Keep hooks simple and focused
