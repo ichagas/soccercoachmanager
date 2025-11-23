@@ -1,0 +1,331 @@
+{
+  "common": {
+    "appName": "ApexCarousel",
+    "tagline": "Gerador de Carrossel LinkedIn com IA",
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Sucesso!",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "yes": "Sim",
+    "no": "Não",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "dismiss": "Dispensar"
+  },
+  "nav": {
+    "dashboard": "Painel",
+    "create": "Criar Carrossel",
+    "history": "Histórico",
+    "settings": "Configurações",
+    "logout": "Sair",
+    "login": "Entrar",
+    "signup": "Cadastrar"
+  },
+  "auth": {
+    "login": "Entrar",
+    "signup": "Cadastrar",
+    "email": "E-mail",
+    "password": "Senha",
+    "forgotPassword": "Esqueceu a senha?",
+    "dontHaveAccount": "Não tem uma conta?",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "signInWithGoogle": "Entrar com Google",
+    "signUpWithGoogle": "Cadastrar com Google",
+    "resetPassword": "Redefinir Senha",
+    "sendResetLink": "Enviar Link de Redefinição",
+    "checkEmail": "Verifique seu e-mail para o link de redefinição",
+    "loginSuccess": "Login realizado com sucesso",
+    "signupSuccess": "Conta criada com sucesso",
+    "logoutSuccess": "Logout realizado com sucesso",
+    "invalidCredentials": "E-mail ou senha inválidos"
+  },
+  "onboarding": {
+    "title": "Bem-vindo ao ApexCarousel",
+    "subtitle": "Vamos configurar sua marca em 3 passos rápidos",
+    "step": "Passo {{current}} de {{total}}",
+    "back": "Voltar",
+    "next": "Próximo",
+    "skip": "Pular por enquanto",
+    "complete": "Salvar e Criar Primeiro Carrossel",
+    "saving": "Salvando...",
+    "characters": "caracteres",
+    "uploadFile": "Clique para enviar",
+    "dragAndDrop": "ou arraste e solte",
+    "maxSize": "Máx {{size}}MB",
+    "clickToChange": "Clique para alterar",
+    "step1": {
+      "title": "Envie Sua Foto",
+      "description": "Sua foto profissional aparecerá em todos os carrosséis",
+      "uploadLabel": "Foto",
+      "tip": "Use uma foto profissional com boa iluminação e fundo limpo"
+    },
+    "step2": {
+      "title": "Envie Seu Logo (Opcional)",
+      "description": "Adicione seu logo para branding consistente",
+      "uploadLabel": "Logo",
+      "tip": "PNG com fundo transparente funciona melhor"
+    },
+    "step3": {
+      "title": "Cores e Slogan da Marca",
+      "description": "Escolha cores e adicione sua chamada para ação",
+      "colorLabel": "Cor da Marca",
+      "taglineLabel": "Slogan / CTA",
+      "taglinePlaceholder": "Me mande 'CRESCER' para o template",
+      "preview": "Prévia",
+      "tip": "Seu slogan aparecerá no final de cada carrossel"
+    },
+    "errors": {
+      "invalidFileType": "Tipo de arquivo inválido. Por favor, envie uma imagem.",
+      "fileTooLarge": "Arquivo muito grande. Tamanho máximo é {{size}}MB.",
+      "saveFailed": "Falha ao salvar sua marca. Por favor, tente novamente."
+    }
+  },
+  "dashboard": {
+    "title": "Painel",
+    "welcome": "Bem-vindo",
+    "subtitle": "Crie carrosséis incríveis para o LinkedIn com IA",
+    "newCarousel": "Novo Carrossel",
+    "recentGenerations": "Gerações Recentes",
+    "noGenerations": "Nenhum carrossel ainda",
+    "noGenerationsDesc": "Comece criando seu primeiro carrossel",
+    "createFirst": "Crie seu primeiro carrossel",
+    "usageLimit": "{{used}}/{{limit}} carrosséis usados",
+    "unlimitedPro": "Ilimitado – Pro 🚀",
+    "quickStart": {
+      "title": "Início Rápido",
+      "subtitle": "Inspire-se com estes exemplos de prompts",
+      "prompt1": "Transforme este post de blog em um carrossel: [cole a URL]",
+      "prompt2": "Crie um carrossel sobre 5 dicas para crescer no LinkedIn",
+      "prompt3": "Faça um carrossel deste caso de estudo: [cole o texto]"
+    },
+    "download": "Baixar",
+    "remix": "Remixar",
+    "viewAll": "Ver todos",
+    "upgradeCTA": {
+      "title": "Você está quase sem carrosséis gratuitos",
+      "subtitle": "Faça upgrade para Pro e tenha carrosséis ilimitados e recursos premium"
+    }
+  },
+  "create": {
+    "title": "Criar Carrossel",
+    "subtitle": "Transforme seu conteúdo em carrosséis envolventes para o LinkedIn",
+    "inputLabel": "Seu Conteúdo",
+    "inputPlaceholder": "Cole URL, transcrição, caso de estudo, ou apenas digite sua ideia...",
+    "inputHint": "Cole a URL de um post, transcrição de vídeo, ou escreva seu próprio conteúdo. Mínimo 10 caracteres.",
+    "clearForm": "Limpar formulário",
+    "minCharacters": "Mínimo de {{min}} caracteres necessários",
+    "limitMessage": "Faça upgrade para Pro para criar carrosséis ilimitados",
+    "selectStyle": "Selecionar Estilo",
+    "styleInfo": "Guia de Estilo",
+    "styles": {
+      "hormozi": "Alex Hormozi - Direto, com provas",
+      "welsh": "Justin Welsh - Calmo, útil",
+      "koe": "Dan Koe - Profundo, filosófico",
+      "custom": "Voz Personalizada - Treinada com seus posts",
+      "customDisabled": "treine sua voz primeiro"
+    },
+    "styleDescriptions": {
+      "hormozi": "Direto e objetivo com exemplos concretos. Usa números, estatísticas e provas. Melhor para conselhos práticos e estudos de caso.",
+      "welsh": "Calmo e conversacional. Foca em ajudar os outros a crescer. Usa linguagem simples e experiência pessoal.",
+      "koe": "Profundo e filosófico. Explora mentalidade e transformação pessoal. Usa metáforas e perguntas provocativas.",
+      "custom": "Sua voz única treinada com seus melhores posts. Mantém seu tom, estilo e personalidade."
+    },
+    "brandKit": {
+      "title": "Kit de Marca",
+      "headshot": "Foto",
+      "logo": "Logo",
+      "color": "Cor da Marca",
+      "tagline": "Slogan",
+      "noBrandKit": "Nenhum kit de marca configurado ainda",
+      "setupBrandKit": "Configurar kit de marca"
+    },
+    "tips": {
+      "title": "Dicas para carrosséis incríveis",
+      "tip1": "Conteúdo mais longo (500+ palavras) funciona melhor",
+      "tip2": "URLs são automaticamente buscadas e processadas",
+      "tip3": "Cada estilo cria padrões diferentes de engajamento"
+    },
+    "generate": "Gerar Carrossel",
+    "generating": "Criando sua obra-prima...",
+    "fetchingUrl": "Buscando conteúdo da URL...",
+    "regenerate": "Regenerar",
+    "tweakAndRegenerate": "Ajustar e Regenerar",
+    "downloadPDF": "Baixar PDF",
+    "copyCaption": "Copiar Legenda",
+    "copyComment": "Copiar Comentário Fixado",
+    "alternativeHooks": "Ganchos Alternativos",
+    "caption": "Legenda",
+    "pinnedComment": "Comentário Fixado",
+    "saveToHistory": "Salvar no Histórico",
+    "generationSuccess": "Carrossel gerado com sucesso!",
+    "copiedToClipboard": "Copiado para a área de transferência!",
+    "newCarousel": "Novo Carrossel"
+  },
+  "generate": {
+    "results": {
+      "title": "Seu Carrossel Está Pronto!",
+      "slides": "Slides do Carrossel",
+      "slide": "Slide",
+      "hook": "Gancho",
+      "alternativeHooks": "Ganchos Alternativos",
+      "hookSelected": "Gancho selecionado - o primeiro slide usará este gancho",
+      "caption": "Legenda do LinkedIn",
+      "pinnedComment": "Comentário Fixado",
+      "regenerate": "Regenerar",
+      "tweakAndRegenerate": "Ajustar e Regenerar",
+      "generatingPDF": "Gerando PDF...",
+      "saving": "Salvando...",
+      "savedSuccess": "Carrossel salvo no histórico!",
+      "saveError": "Falha ao salvar carrossel. Por favor, tente novamente.",
+      "pdfError": "Falha ao gerar PDF. Por favor, tente novamente.",
+      "nextSteps": {
+        "title": "Próximos Passos",
+        "subtitle": "Baixe seu PDF ou salve no histórico para mais tarde",
+        "downloadPDF": "Baixar PDF",
+        "saveToHistory": "Salvar no Histórico"
+      }
+    },
+    "modal": {
+      "title": "Ajustar e Regenerar",
+      "subtitle": "Adicione instruções personalizadas para ajustar a geração do carrossel",
+      "instructionsLabel": "Instruções Personalizadas (Opcional)",
+      "instructionsPlaceholder": "ex: Torne mais casual, adicione mais estatísticas, foque em benefícios em vez de recursos...",
+      "instructionsHint": "Diga à IA como ajustar o carrossel. Seja específico sobre o que você quer mudado.",
+      "examplesTitle": "Exemplos de Instruções:",
+      "example1": "Torne o tom mais profissional e formal",
+      "example2": "Adicione mais números e estatísticas específicas",
+      "example3": "Foque em explicações para iniciantes",
+      "example4": "Inclua mais passos práticos",
+      "regenerate": "Regenerar",
+      "regenerating": "Regenerando..."
+    }
+  },
+  "history": {
+    "title": "Histórico",
+    "search": "Buscar...",
+    "filterByStyle": "Filtrar por estilo",
+    "allStyles": "Todos os estilos",
+    "noResults": "Nenhum carrossel encontrado",
+    "delete": "Excluir",
+    "deleteConfirm": "Tem certeza que deseja excluir este carrossel?",
+    "deleted": "Carrossel excluído"
+  },
+  "settings": {
+    "title": "Configurações",
+    "subtitle": "Gerencie sua conta, kit de marca e preferências",
+    "save": "Salvar Alterações",
+    "saving": "Salvando...",
+    "reset": "Resetar",
+    "saveSuccess": "Configurações salvas com sucesso!",
+    "saveError": "Falha ao salvar configurações. Por favor, tente novamente.",
+    "languageUpdated": "Idioma atualizado com sucesso",
+    "languageError": "Falha ao atualizar idioma. Por favor, tente novamente.",
+    "tabs": {
+      "brandKit": "Kit de Marca",
+      "account": "Conta",
+      "billing": "Cobrança"
+    },
+    "brandKit": {
+      "title": "Kit de Marca",
+      "headshot": "Foto da Marca",
+      "logo": "Logo da Marca",
+      "color": "Cor da Marca",
+      "colors": "Cores da Marca",
+      "tagline": "Slogan da Marca",
+      "taglinePlaceholder": "ex: Mande DM 'CRESCER' para o template",
+      "uploadHeadshot": "Enviar Foto",
+      "uploadLogo": "Enviar Logo",
+      "preview": "Prévia",
+      "updated": "Kit de marca atualizado com sucesso"
+    },
+    "account": {
+      "title": "Configurações da Conta",
+      "email": "Endereço de E-mail",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "changePassword": "Alterar Senha",
+      "currentPassword": "Senha Atual",
+      "newPassword": "Nova Senha",
+      "confirmPassword": "Confirmar Senha",
+      "customVoice": "Treinamento de Voz Personalizada",
+      "trainVoice": "Treinar IA com minha voz",
+      "pasteSamples": "Cole 3-5 dos seus melhores posts aqui...",
+      "language": "Preferência de Idioma",
+      "deleteAccount": "Excluir Conta",
+      "deleteAccountConfirm": "Tem certeza? Esta ação não pode ser desfeita.",
+      "passwordUpdated": "Senha atualizada com sucesso",
+      "voiceTrained": "Voz treinada com sucesso"
+    },
+    "preferences": {
+      "title": "Preferências",
+      "language": "Idioma"
+    },
+    "billing": {
+      "title": "Cobrança e Assinatura",
+      "currentPlan": "Plano Atual",
+      "usage": "Uso",
+      "upgradeNow": "Upgrade para Pro",
+      "manageSubscription": "Gerenciar Assinatura",
+      "totalGenerations": "Total de Gerações",
+      "thisMonth": "Este Mês",
+      "remainingFree": "Gerações Gratuitas Restantes"
+    }
+  },
+  "upgrade": {
+    "title": "Upgrade para Pro",
+    "subtitle": "Desbloqueie carrosséis ilimitados e recursos premium",
+    "free": {
+      "name": "Gratuito",
+      "price": "R$ 0",
+      "features": [
+        "5 carrosséis vitalícios",
+        "Estilos básicos",
+        "Download de PDFs"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "R$ 149/mês",
+      "features": [
+        "Carrosséis ilimitados",
+        "Todos os estilos incluindo voz personalizada",
+        "Kit de marca",
+        "Histórico e remix",
+        "Suporte prioritário"
+      ]
+    },
+    "founder": {
+      "name": "Fundador Vitalício",
+      "price": "R$ 497 pagamento único",
+      "features": [
+        "Tudo do Pro",
+        "Acesso vitalício",
+        "Acesso antecipado a novos recursos",
+        "Badge de fundador"
+      ]
+    },
+    "upgradeSuccess": "Bem-vindo ao Pro! 🚀",
+    "upgradeCancelled": "Sem problemas, você pode fazer upgrade a qualquer momento"
+  },
+  "errors": {
+    "generic": "Algo deu errado. Por favor, tente novamente.",
+    "network": "Erro de rede. Por favor, verifique sua conexão.",
+    "notFound": "Página não encontrada",
+    "unauthorized": "Você precisa estar logado para acessar esta página",
+    "limitReached": "Você atingiu seu limite de gerações. Faça upgrade para Pro para carrosséis ilimitados!",
+    "invalidInput": "Por favor, forneça uma entrada válida",
+    "fileTooLarge": "Arquivo muito grande. Tamanho máximo é 10MB.",
+    "invalidFileType": "Tipo de arquivo inválido",
+    "error": "Erro",
+    "apiNotConfigured": "API do Claude não está configurada. Por favor, adicione VITE_ANTHROPIC_API_KEY às suas variáveis de ambiente.",
+    "generationFailed": "Falha ao gerar carrossel. Por favor, tente novamente."
+  }
+}

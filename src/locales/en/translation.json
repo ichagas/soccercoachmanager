@@ -1,0 +1,331 @@
+{
+  "common": {
+    "appName": "ApexCarousel",
+    "tagline": "AI LinkedIn Carousel Generator",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "dismiss": "Dismiss"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "create": "Create Carousel",
+    "history": "History",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "auth": {
+    "login": "Log In",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "signInWithGoogle": "Sign in with Google",
+    "signUpWithGoogle": "Sign up with Google",
+    "resetPassword": "Reset Password",
+    "sendResetLink": "Send Reset Link",
+    "checkEmail": "Check your email for a reset link",
+    "loginSuccess": "Logged in successfully",
+    "signupSuccess": "Account created successfully",
+    "logoutSuccess": "Logged out successfully",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "onboarding": {
+    "title": "Welcome to ApexCarousel",
+    "subtitle": "Let's set up your brand kit in 3 quick steps",
+    "step": "Step {{current}} of {{total}}",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip for now",
+    "complete": "Save & Create First Carousel",
+    "saving": "Saving...",
+    "characters": "characters",
+    "uploadFile": "Click to upload",
+    "dragAndDrop": "or drag and drop",
+    "maxSize": "Max {{size}}MB",
+    "clickToChange": "Click to change",
+    "step1": {
+      "title": "Upload Your Headshot",
+      "description": "Your professional photo will appear on every carousel",
+      "uploadLabel": "Headshot",
+      "tip": "Use a professional headshot with good lighting and a clear background"
+    },
+    "step2": {
+      "title": "Upload Your Logo (Optional)",
+      "description": "Add your brand logo for consistent branding",
+      "uploadLabel": "Logo",
+      "tip": "PNG with transparent background works best"
+    },
+    "step3": {
+      "title": "Brand Colors & Tagline",
+      "description": "Choose colors and add your call-to-action",
+      "colorLabel": "Brand Color",
+      "taglineLabel": "Tagline / CTA",
+      "taglinePlaceholder": "DM me 'GROW' for the template",
+      "preview": "Preview",
+      "tip": "Your tagline will appear at the end of every carousel"
+    },
+    "errors": {
+      "invalidFileType": "Invalid file type. Please upload an image.",
+      "fileTooLarge": "File is too large. Maximum size is {{size}}MB.",
+      "saveFailed": "Failed to save your brand kit. Please try again."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "subtitle": "Create amazing LinkedIn carousels with AI",
+    "newCarousel": "New Carousel",
+    "recentGenerations": "Recent Generations",
+    "noGenerations": "No carousels yet",
+    "noGenerationsDesc": "Get started by creating your first carousel",
+    "createFirst": "Create your first carousel",
+    "usageLimit": "{{used}}/{{limit}} carousels used",
+    "unlimitedPro": "Unlimited – Pro 🚀",
+    "quickStart": {
+      "title": "Quick Start",
+      "subtitle": "Get inspired with these example prompts",
+      "prompt1": "Turn this blog post into a carousel: [paste URL]",
+      "prompt2": "Create a carousel about 5 tips for LinkedIn growth",
+      "prompt3": "Make a carousel from this case study: [paste text]"
+    },
+    "download": "Download",
+    "remix": "Remix",
+    "viewAll": "View all",
+    "upgradeCTA": {
+      "title": "You're almost out of free carousels",
+      "subtitle": "Upgrade to Pro for unlimited carousels and premium features"
+    }
+  },
+  "create": {
+    "title": "Create Carousel",
+    "subtitle": "Transform your content into engaging LinkedIn carousels",
+    "inputLabel": "Your Content",
+    "inputPlaceholder": "Paste URL, transcript, case study, or just type your idea...",
+    "inputHint": "Paste a blog post URL, video transcript, or write your own content. Minimum 10 characters.",
+    "clearForm": "Clear form",
+    "minCharacters": "Minimum {{min}} characters required",
+    "limitMessage": "Upgrade to Pro to create unlimited carousels",
+    "selectStyle": "Select Style",
+    "styleInfo": "Style Guide",
+    "styles": {
+      "hormozi": "Alex Hormozi - Direct, proof-heavy",
+      "welsh": "Justin Welsh - Calm, helpful",
+      "koe": "Dan Koe - Deep, philosophical",
+      "custom": "Custom Voice - Trained on your posts",
+      "customDisabled": "train your voice first"
+    },
+    "styleDescriptions": {
+      "hormozi": "Bold and direct with concrete examples. Uses numbers, statistics, and proof. Best for actionable advice and case studies.",
+      "welsh": "Calm and conversational. Focuses on helping others grow. Uses simple language and personal experience.",
+      "koe": "Deep and philosophical. Explores mindset and personal transformation. Uses metaphors and thought-provoking questions.",
+      "custom": "Your unique voice trained on your best posts. Maintains your tone, style, and personality."
+    },
+    "brandKit": {
+      "title": "Brand Kit",
+      "headshot": "Headshot",
+      "logo": "Logo",
+      "color": "Brand Color",
+      "tagline": "Tagline",
+      "noBrandKit": "No brand kit set up yet",
+      "setupBrandKit": "Set up brand kit"
+    },
+    "tips": {
+      "title": "Tips for great carousels",
+      "tip1": "Longer content (500+ words) works best",
+      "tip2": "URLs are automatically fetched and processed",
+      "tip3": "Each style creates different engagement patterns"
+    },
+    "generate": "Generate Carousel",
+    "generating": "Crafting your masterpiece...",
+    "fetchingUrl": "Fetching URL content...",
+    "regenerate": "Regenerate",
+    "tweakAndRegenerate": "Tweak & Regenerate",
+    "downloadPDF": "Download PDF",
+    "copyCaption": "Copy Caption",
+    "copyComment": "Copy Pinned Comment",
+    "alternativeHooks": "Alternative Hooks",
+    "caption": "Caption",
+    "pinnedComment": "Pinned Comment",
+    "saveToHistory": "Save to History",
+    "generationSuccess": "Carousel generated successfully!",
+    "copiedToClipboard": "Copied to clipboard!",
+    "newCarousel": "New Carousel"
+  },
+  "generate": {
+    "results": {
+      "title": "Your Carousel is Ready!",
+      "slides": "Carousel Slides",
+      "slide": "Slide",
+      "hook": "Hook",
+      "alternativeHooks": "Alternative Hooks",
+      "hookSelected": "Hook selected - first slide will use this hook",
+      "caption": "LinkedIn Caption",
+      "pinnedComment": "Pinned Comment",
+      "regenerate": "Regenerate",
+      "tweakAndRegenerate": "Tweak & Regenerate",
+      "generatingPDF": "Generating PDF...",
+      "saving": "Saving...",
+      "savedSuccess": "Carousel saved to history!",
+      "saveError": "Failed to save carousel. Please try again.",
+      "pdfError": "Failed to generate PDF. Please try again.",
+      "nextSteps": {
+        "title": "Next Steps",
+        "subtitle": "Download your PDF or save to history for later",
+        "downloadPDF": "Download PDF",
+        "saveToHistory": "Save to History"
+      }
+    },
+    "modal": {
+      "title": "Tweak & Regenerate",
+      "subtitle": "Add custom instructions to adjust the carousel generation",
+      "instructionsLabel": "Custom Instructions (Optional)",
+      "instructionsPlaceholder": "e.g., Make it more casual, add more statistics, focus on benefits instead of features...",
+      "instructionsHint": "Tell the AI how to adjust the carousel. Be specific about what you want changed.",
+      "examplesTitle": "Example Instructions:",
+      "example1": "Make the tone more professional and formal",
+      "example2": "Add more specific numbers and statistics",
+      "example3": "Focus on beginner-friendly explanations",
+      "example4": "Include more actionable steps",
+      "regenerate": "Regenerate",
+      "regenerating": "Regenerating..."
+    }
+  },
+  "history": {
+    "title": "History",
+    "search": "Search...",
+    "filterByStyle": "Filter by style",
+    "allStyles": "All styles",
+    "noResults": "No carousels found",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this carousel?",
+    "deleted": "Carousel deleted"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account, brand kit, and preferences",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "reset": "Reset",
+    "saveSuccess": "Settings saved successfully!",
+    "saveError": "Failed to save settings. Please try again.",
+    "languageUpdated": "Language updated successfully",
+    "languageError": "Failed to update language. Please try again.",
+    "tabs": {
+      "brandKit": "Brand Kit",
+      "account": "Account",
+      "billing": "Billing"
+    },
+    "brandKit": {
+      "title": "Brand Kit",
+      "headshot": "Brand Headshot",
+      "logo": "Brand Logo",
+      "color": "Brand Color",
+      "colors": "Brand Colors",
+      "tagline": "Brand Tagline",
+      "taglinePlaceholder": "e.g., DM me 'GROW' for the template",
+      "uploadHeadshot": "Upload Headshot",
+      "uploadLogo": "Upload Logo",
+      "preview": "Preview",
+      "updated": "Brand kit updated successfully"
+    },
+    "account": {
+      "title": "Account Settings",
+      "email": "Email Address",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "customVoice": "Custom Voice Training",
+      "trainVoice": "Train AI on my voice",
+      "pasteSamples": "Paste 3-5 of your best posts here...",
+      "language": "Language Preference",
+      "deleteAccount": "Delete Account",
+      "deleteAccountConfirm": "Are you sure? This action cannot be undone.",
+      "passwordUpdated": "Password updated successfully",
+      "voiceTrained": "Voice trained successfully"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "language": "Language"
+    },
+    "billing": {
+      "title": "Billing & Subscription",
+      "currentPlan": "Current Plan",
+      "usage": "Usage",
+      "upgradeNow": "Upgrade to Pro",
+      "manageSubscription": "Manage Subscription",
+      "totalGenerations": "Total Generations",
+      "thisMonth": "This Month",
+      "remainingFree": "Remaining Free Generations"
+    }
+  },
+  "upgrade": {
+    "title": "Upgrade to Pro",
+    "subtitle": "Unlock unlimited carousels and premium features",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "features": [
+        "5 carousels lifetime",
+        "Basic styles",
+        "Download PDFs"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "$29/mo",
+      "features": [
+        "Unlimited carousels",
+        "All styles including custom voice",
+        "Brand kit",
+        "History & remix",
+        "Priority support"
+      ]
+    },
+    "founder": {
+      "name": "Founder Lifetime",
+      "price": "$99 one-time",
+      "features": [
+        "Everything in Pro",
+        "Lifetime access",
+        "Early access to new features",
+        "Founder badge"
+      ]
+    },
+    "upgradeSuccess": "Welcome to Pro! 🚀",
+    "upgradeCancelled": "No worries, you can upgrade anytime"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "notFound": "Page not found",
+    "unauthorized": "You must be logged in to access this page",
+    "limitReached": "You've reached your generation limit. Upgrade to Pro for unlimited carousels!",
+    "invalidInput": "Please provide valid input",
+    "fileTooLarge": "File is too large. Maximum size is 10MB.",
+    "invalidFileType": "Invalid file type",
+    "error": "Error",
+    "apiNotConfigured": "Claude API is not configured. Please add VITE_ANTHROPIC_API_KEY to your environment variables.",
+    "generationFailed": "Failed to generate carousel. Please try again."
+  }
+}
